@@ -1,4 +1,15 @@
 {
-  "extends": "@snowpack/app-scripts-vue",
-  "plugins": []
+  "mount": {
+    "public": "/",
+    "src": "/src"
+  },
+  "plugins": ["@snowpack/plugin-vue", "@snowpack/plugin-dotenv", "@snowpack/plugin-sass"],
+  "buildOptions": {
+    "baseUrl": "/",
+    "clean": false,
+    "metaDir": "__snowpack__",
+    "minify": false,
+    "sourceMaps": true,
+    "webModulesUrl": "web_modules"
+  }
 }
